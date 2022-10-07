@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="5" name="Failed suite [PositiveTestSuite]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="5" name="LPC(failed)" verbose="5">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tribu.qarestassure.tests.Basics">
+        <methods>
+          <include name="apiTest"/>
+        </methods>
+      </class> <!-- com.tribu.qarestassure.tests.Basics -->
+    </classes>
+  </test> <!-- LPC(failed) -->
+</suite> <!-- Failed suite [PositiveTestSuite] -->
