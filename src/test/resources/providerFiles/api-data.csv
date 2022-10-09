@@ -1,0 +1,17 @@
+todo,baseUri,resource,key,contentType,body,statusCode,scope,server,newAddress
+TRUE,https://rahulshettyacademy.com,/maps/api/place/add/json,qaclick123,application/json,"{
+  ""location"": {
+    ""lat"": -38.383494,
+    ""lng"": 33.427364
+  },
+  ""accuracy"": 50,
+  ""name"": ""Jaime house"",
+  ""phone_number"": ""(+91) 983 893 3937"",
+  ""address"": ""29, side layout, cohen 09"",
+  ""types"": [
+    ""shoe park"",
+    ""shop""
+  ],
+  ""website"": ""http://google.com"",
+  ""language"": ""French-IN""
+}",200,APP,Apache/2.4.41 (Ubuntu),Cr. 67# 73-168 Barranquilla

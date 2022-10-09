@@ -6,7 +6,7 @@
     <classes>
       <class name="com.tribu.qarestassure.tests.Basics">
         <methods>
-          <include name="apiTest"/>
+          <include name="apiTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.tribu.qarestassure.tests.Basics -->
     </classes>

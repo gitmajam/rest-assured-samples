@@ -2,12 +2,37 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-21T19:32:22 COT" name="PositiveTestSuite" finished-at="2022-08-21T19:32:29 COT" duration-ms="6292">
+  <suite started-at="2022-10-08T21:09:14 COT" name="PositiveTestSuite" finished-at="2022-10-08T21:09:18 COT" duration-ms="4671">
     <groups>
+      <group name="smoke">
+        <method signature="Basics.apiTest(java.util.Map)[pri:0, instance:com.tribu.qarestassure.tests.Basics@2892dae4]" name="apiTest" class="com.tribu.qarestassure.tests.Basics"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-08-21T19:32:22 COT" name="LPC" finished-at="2022-08-21T19:32:29 COT" duration-ms="6292">
+    <test started-at="2022-10-08T21:09:14 COT" name="LPC" finished-at="2022-10-08T21:09:18 COT" duration-ms="4671">
       <class name="com.tribu.qarestassure.tests.Basics">
-        <test-method signature="apiTest()[pri:0, instance:com.tribu.qarestassure.tests.Basics@7ff95560]" started-at="2022-08-21T19:32:22 COT" name="apiTest" finished-at="2022-08-21T19:32:29 COT" duration-ms="6242" status="PASS">
+        <test-method signature="apiTest(java.util.Map)[pri:0, instance:com.tribu.qarestassure.tests.Basics@2892dae4]" started-at="2022-10-08T21:09:14 COT" name="apiTest" data-provider="csvReader" finished-at="2022-10-08T21:09:18 COT" duration-ms="4648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{todo=TRUE, server=Apache/2.4.41 (Ubuntu), resource=/maps/api/place/add/json, baseUri=https://rahulshettyacademy.com, scope=APP, body={
+  "location": {
+    "lat": -38.383494,
+    "lng": 33.427364
+  },
+  "accuracy": 50,
+  "name": "Jaime house",
+  "phone_number": "(+91) 983 893 3937",
+  "address": "29, side layout, cohen 09",
+  "types": [
+    "shoe park",
+    "shop"
+  ],
+  "website": "http://google.com",
+  "language": "French-IN"
+}, contentType=application/json, key=qaclick123, newAddress=Cr. 67# 73-168 Barranquilla, statusCode=200}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- apiTest -->
