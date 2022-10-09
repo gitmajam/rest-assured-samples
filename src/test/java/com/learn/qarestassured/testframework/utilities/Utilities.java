@@ -1,4 +1,4 @@
-package com.tribu.qarestassured.testframework.utilities;
+package com.learn.qarestassured.testframework.utilities;
 
 import io.restassured.path.json.JsonPath;
 

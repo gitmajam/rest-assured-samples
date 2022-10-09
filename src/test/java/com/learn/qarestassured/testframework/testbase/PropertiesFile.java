@@ -1,4 +1,4 @@
-package com.tribu.qarestassured.testframework.testbase;
+package com.learn.qarestassured.testframework.testbase;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

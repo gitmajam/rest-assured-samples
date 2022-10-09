@@ -1,4 +1,4 @@
-package com.tribu.qarestassured.testframework.testbase;
+package com.learn.qarestassured.testframework.testbase;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

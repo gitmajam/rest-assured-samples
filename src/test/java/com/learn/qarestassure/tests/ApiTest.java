@@ -1,4 +1,4 @@
-package com.tribu.qarestassure.tests;
+package com.learn.qarestassure.tests;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -8,8 +8,8 @@ import java.util.Map;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.tribu.qarestassured.testframework.utilities.DataProviders;
-import com.tribu.qarestassured.testframework.utilities.Utilities;
+import com.learn.qarestassured.testframework.utilities.DataProviders;
+import com.learn.qarestassured.testframework.utilities.Utilities;
 
 import io.restassured.RestAssured;
 
