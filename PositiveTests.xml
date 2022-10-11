@@ -1,12 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="PositiveTestSuite" verbose="5"
 	data-provider-thread-count="5">
-	<test name="LPC" preserve-order="true">
+	<test name="Basic" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class
-				name="com.tribu.qarestassure.tests.Basics" />
+<!-- 			<class name="com.learn.qarestassure.tests.ApiTest" /> -->
 		</classes>
 	</test>
-
+		<test name="Json" preserve-order="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.learn.qarestassure.tests.CoursesApiTest" />
+		</classes>
+	</test>
 </suite>

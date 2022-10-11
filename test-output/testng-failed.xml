@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="5" name="Failed suite [PositiveTestSuite]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="5" name="Json(failed)" verbose="5">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.learn.qarestassure.tests.CoursesApiTest">
+        <methods>
+          <include name="verifyCoursesData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.learn.qarestassure.tests.CoursesApiTest -->
+    </classes>
+  </test> <!-- Json(failed) -->
+</suite> <!-- Failed suite [PositiveTestSuite] -->

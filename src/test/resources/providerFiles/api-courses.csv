@@ -1,0 +1,24 @@
+todo,baseUri,resource,key,contentType,body,statusCode,scope,server,newAddress
+TRUE,https://rahulshettyacademy.com,/maps/api/place/add/json,qaclick123,application/json,"{
+  ""dashboard"": {
+    ""purchaseAmount"": 910,
+    ""website"": ""rahulshettyacademy.com""
+  },
+  ""courses"": [
+    {
+      ""title"": ""Selenium Python"",
+      ""price"": 50,
+      ""copies"": 6
+    },
+    {
+      ""title"": ""Cypress"",
+      ""price"": 40,
+      ""copies"": 4
+    },
+    {
+      ""title"": ""RPA"",
+      ""price"": 45,
+      ""copies"": 10
+    }
+  ]
+}",200,APP,Apache/2.4.41 (Ubuntu),Cr. 67# 73-168 Barranquilla
