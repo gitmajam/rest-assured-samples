@@ -146,6 +146,45 @@ public class DataProviders {
 
 		return list.iterator();
 	}
+	
+	/**
+	 * This data provider searchs for method argument into the csv file, column [1]
+	 * and returns the data asociated with the method
+	 */
+	@DataProvider(name = "csvReaderMethod", parallel = false)
+	public static Iterator<Object[]> csvReaderMethod(Method method) {
+
+		String path = getProviderPath(method);
+		List<Object[]> list = new ArrayList<Object[]>();
+
+		File file = new File(path);
+		try {
+			CSVReader reader = new CSVReader(new FileReader(file));
+			String[] keys = reader.readNext();
+			if (keys != null) {
+				String[] dataParts;
+				while ((dataParts = reader.readNext()) != null) {
+					if (method.getName().equals(dataParts[1])) {
+						Map<String, String> testData = new HashMap<String, String>();
+						for (int i = 0; i < keys.length; i++) {
+							testData.put(keys[i], dataParts[i]);
+						}
+						list.add(new Object[] { testData });
+					}
+				}
+			}
+			reader.close();
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("File " + path + " was not found.\n" + e.getStackTrace().toString());
+		} catch (IOException e) {
+			throw new RuntimeException("Could not read " + path + " file.\n" + e.getStackTrace().toString());
+		} catch (CsvValidationException e) {
+			throw new RuntimeException(
+					"Could not read next line in csv file" + path + "\n" + e.getStackTrace().toString());
+		}
+
+		return list.iterator();
+	}
 
 	private static String getProviderPath(Method method) {
 

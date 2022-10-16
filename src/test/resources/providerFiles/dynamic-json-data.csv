@@ -1,0 +1,7 @@
+todo,method,baseUri,resource,key,contentType,body,statusCode,scope,server,newAddress,name,isbn,aisle
+TRUE,addBook,http://216.10.245.166,/Library/Addbook.php,,application/json,"{
+  ""name"": ""Reliasure"",
+  ""isbn"": ""bcd3"",
+  ""aisle"": ""29262"",
+  ""author"": ""Marlon Muñoz""
+}",200,,,,La rosa de guadalupe,trump,54321

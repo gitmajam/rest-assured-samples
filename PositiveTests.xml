@@ -7,10 +7,16 @@
 <!-- 			<class name="com.learn.qarestassure.tests.ApiTest" /> -->
 		</classes>
 	</test>
-		<test name="Json" preserve-order="true">
+	<test name="Json" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.learn.qarestassure.tests.CoursesApiTest" />
+			<!-- <class name="com.learn.qarestassure.tests.CoursesApiTest" /> -->
+		</classes>
+	</test>
+	<test name="DynamicJson" preserve-order="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.learn.qarestassure.tests.DynamicJson" />
 		</classes>
 	</test>
 </suite>
