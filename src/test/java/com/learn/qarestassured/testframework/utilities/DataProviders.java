@@ -146,7 +146,7 @@ public class DataProviders {
 
 		return list.iterator();
 	}
-	
+
 	/**
 	 * This data provider searchs for method argument into the csv file, column [1]
 	 * and returns the data asociated with the method
@@ -164,12 +164,15 @@ public class DataProviders {
 			if (keys != null) {
 				String[] dataParts;
 				while ((dataParts = reader.readNext()) != null) {
-					if (method.getName().equals(dataParts[1])) {
-						Map<String, String> testData = new HashMap<String, String>();
-						for (int i = 0; i < keys.length; i++) {
-							testData.put(keys[i], dataParts[i]);
+					String todo = dataParts[0];
+					if (todo.contentEquals("TRUE")) {
+						if (method.getName().contentEquals(dataParts[1])) {
+							Map<String, String> testData = new HashMap<String, String>();
+							for (int i = 0; i < keys.length; i++) {
+								testData.put(keys[i], dataParts[i]);
+							}
+							list.add(new Object[] { testData });
 						}
-						list.add(new Object[] { testData });
 					}
 				}
 			}

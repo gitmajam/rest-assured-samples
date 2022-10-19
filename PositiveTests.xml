@@ -4,7 +4,7 @@
 	<test name="Basic" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-<!-- 			<class name="com.learn.qarestassure.tests.ApiTest" /> -->
+			<!-- <class name="com.learn.qarestassure.tests.ApiTest" /> -->
 		</classes>
 	</test>
 	<test name="Json" preserve-order="true">
@@ -16,7 +16,14 @@
 	<test name="DynamicJson" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.learn.qarestassure.tests.DynamicJson" />
+<!-- 			<class name="com.learn.qarestassure.tests.DynamicJson" /> -->
+		</classes>
+	</test>
+	<test name="JiraApiIssues" preserve-order="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.learn.qarestassure.tests.JiraApiCreateIssueTest" />
+			<class name="com.learn.qarestassure.tests.JiraApiEditIssueTest" />
 		</classes>
 	</test>
 </suite>

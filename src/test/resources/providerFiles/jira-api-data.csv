@@ -1,0 +1,27 @@
+todo,method,baseUri,resourceLogin,resourceToTest,contentType,loginBody,body,statusCode,username,password,summary,description
+TRUE,createIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue,application/json,"{
+    ""username"": ""fred"",
+    ""password"": ""freds_password""
+}","{
+    ""fields"": {
+        ""project"": {
+            ""key"": ""TEST""
+        },
+        ""summary"": ""Create initiative isn't working"",
+        ""description"": ""BUG - regretion test to b22"",
+        ""issuetype"": {
+            ""name"": ""Bug""
+        }
+    }
+}",200,marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
+TRUE,editIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue/{key},application/json,"{
+    ""username"": ""fred"",
+    ""password"": ""freds_password""
+}","{""update"": {
+    ""summary"": [
+      {
+        ""set"": ""Bug in business logic""
+      }
+    ]
+  }
+}",200,marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
