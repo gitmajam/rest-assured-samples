@@ -1,4 +1,4 @@
-package com.learn.qarestassure.tests;
+package com.learn.qarestassured.tests.apijira;
 
 import static io.restassured.RestAssured.given;
 
@@ -14,7 +14,7 @@ import com.learn.qarestassured.testframework.utilities.Utilities;
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 
-public class JiraApiCreateIssueTest {
+public class CreateIssueTest {
 
 	public static String dataProviderFilePath = "src/test/resources/providerFiles/jira-api-data.csv";
 

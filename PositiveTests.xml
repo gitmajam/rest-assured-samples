@@ -1,29 +1,39 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="PositiveTestSuite" verbose="5"
 	data-provider-thread-count="5">
-	<test name="Basic" preserve-order="true">
-		<parameter name="browser" value="chrome"></parameter>
+		<test name="Basic" preserve-order="true">
 		<classes>
-			<!-- <class name="com.learn.qarestassure.tests.ApiTest" /> -->
+			<!-- <class name="com.learn.qarestassured.tests.ApiTest" /> -->
 		</classes>
 	</test>
-	<test name="Json" preserve-order="true">
-		<parameter name="browser" value="chrome"></parameter>
+		<test name="Json" preserve-order="true">
 		<classes>
-			<!-- <class name="com.learn.qarestassure.tests.CoursesApiTest" /> -->
+			<!-- <class name="com.learn.qarestassured.tests.CoursesApiTest" /> -->
 		</classes>
 	</test>
-	<test name="DynamicJson" preserve-order="true">
-		<parameter name="browser" value="chrome"></parameter>
+		<test name="DynamicJson" preserve-order="true">
 		<classes>
-<!-- 			<class name="com.learn.qarestassure.tests.DynamicJson" /> -->
+<!-- 			<class name="com.learn.qarestassured.tests.DynamicJson" /> -->
 		</classes>
 	</test>
-	<test name="JiraApiIssues" preserve-order="true">
-		<parameter name="browser" value="chrome"></parameter>
+		<test name="CreateEditIssue" preserve-order="true">
 		<classes>
-			<class name="com.learn.qarestassure.tests.JiraApiCreateIssueTest" />
-			<class name="com.learn.qarestassure.tests.JiraApiEditIssueTest" />
+<!-- 			<class name="com.learn.qarestassured.tests.apijira.CreateIssueTest" /> -->
+<!-- 			<class name="com.learn.qarestassured.tests.apijira.EditIssueTest" /> -->
+		</classes>
+	</test>
+	
+		<test name="AddAttachment" preserve-order="true">
+		<classes>
+<!-- 			<class name="com.learn.qarestassured.tests.apijira.CreateIssueTest" /> -->
+<!-- 			<class name="com.learn.qarestassured.tests.apijira.AddAttachmentTest" /> -->
+		</classes>
+	</test>
+	
+			<test name="GetIssue" preserve-order="true">
+		<classes>
+			<class name="com.learn.qarestassured.tests.apijira.CreateIssueTest" />
+			<class name="com.learn.qarestassured.tests.apijira.GetIssueTest" />
 		</classes>
 	</test>
 </suite>

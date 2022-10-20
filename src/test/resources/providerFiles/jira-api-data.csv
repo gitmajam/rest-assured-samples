@@ -1,4 +1,4 @@
-todo,method,baseUri,resourceLogin,resourceToTest,contentType,loginBody,body,statusCode,username,password,summary,description
+todo,method,baseUri,resourceLogin,resourceToTest,contentType,loginBody,body,username,password,summary,description
 TRUE,createIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue,application/json,"{
     ""username"": ""fred"",
     ""password"": ""freds_password""
@@ -13,7 +13,7 @@ TRUE,createIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue,ap
             ""name"": ""Bug""
         }
     }
-}",200,marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
+}",marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
 TRUE,editIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue/{key},application/json,"{
     ""username"": ""fred"",
     ""password"": ""freds_password""
@@ -24,4 +24,12 @@ TRUE,editIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue/{key
       }
     ]
   }
-}",200,marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
+}",marlonjavi,Hgt%56dR4,Test failed,regretion B22 failed
+TRUE,addAttachment,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue/{key}/attachments,multipart/form-data,"{
+    ""username"": ""fred"",
+    ""password"": ""freds_password""
+}",,marlonjavi,Hgt%56dR4,,
+TRUE,getIssue,http://localhost:8080,/rest/auth/1/session,/rest/api/2/issue/{key},,"{
+    ""username"": ""fred"",
+    ""password"": ""freds_password""
+}",,marlonjavi,Hgt%56dR4,,regretion B22 failed

@@ -1,10 +1,10 @@
-package com.learn.qarestassure.tests;
+package com.learn.qarestassured.tests.apijira;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.File;
 import java.util.Map;
 
-import org.testng.ISuite;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -14,34 +14,35 @@ import com.learn.qarestassured.testframework.utilities.Utilities;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
-import io.restassured.response.Response;
 
-public class JiraApiEditIssueTest {
+public class AddAttachmentTest {
 
 	public static String dataProviderFilePath = "src/test/resources/providerFiles/jira-api-data.csv";
 
 	@Test(dataProvider = "csvReaderMethod", dataProviderClass = DataProviders.class, groups = { "smoke" })
-	public void editIssue(ITestContext context, Map<String, String> provider) {
+	public void addAttachment(ITestContext context, Map<String, String> provider) {
 
 		// parameters shared by other test in the same test
 		SessionFilter session = (SessionFilter)context.getAttribute("session");
-		System.out.println("session ID: " + session.getSessionId());
 		String key = (String)context.getAttribute("key");
-
-		// parse Json body and change some fields
-		ObjectNode editBodyNode = Utilities.rawToJsonObject(provider.get("body"));
+		
+		String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+				+ File.separator + "resources" + File.separator + "media" + File.separator+ "pdf" + File.separator
+				+ "certs.pdf";
 		
 		RestAssured.baseURI = provider.get("baseUri");
 
-		// create issue
-		String editResponse = given().log().all()
+		// add attachment, passing session object
+		String editResponse1 = given().log().all()
 				.pathParam("key", key)
+				.header("X-Atlassian-Token","no-check")
 				.header("Content-Type", provider.get("contentType"))
-				.body(editBodyNode)
+				.multiPart("file", new File(path))
 				.filter(session) // passing the session as a result of login operation
-				.when().put(provider.get("resourceToTest"))
-				.then().log().all().assertThat().statusCode(204)
+				.when().post(provider.get("resourceToTest"))
+				.then().log().all().assertThat().statusCode(200)
 				.extract().response().asString();
+
 
 	}
 }
