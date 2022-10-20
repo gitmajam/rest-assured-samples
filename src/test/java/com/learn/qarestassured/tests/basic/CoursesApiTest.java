@@ -1,4 +1,4 @@
-package com.learn.qarestassured.tests;
+package com.learn.qarestassured.tests.basic;
 
 import java.util.List;
 import java.util.Map;
